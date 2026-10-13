@@ -53,13 +53,14 @@
   </style>
 </head>
 <body>
-  <div class="bar"><a href="index.html">← Portfolio</a><button class="v" onclick="print()">Print / Save as PDF</button><a href="cv.pdf" download>Download PDF</a></div>
+  <div class="bar"><a href="index.html">← Portfolio</a><button class="v" onclick="print()">Print / Save as PDF</button><a href="cv.pdf" download="Md. Tareque Abdullah.pdf">Download PDF</a></div>
   <div id="cv"></div>
   <script src="data/site.js"></script>
   <script src="data/projects.js"></script>
   <script>
     const S = window.SITE, P = window.PROJECTS, e = (s) => String(s ?? "").replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
     document.title = `${S.name} — CV`;
+    document.querySelector(".bar a[download]").download = `${S.name}.pdf`;   // saved under the full name, not cv.pdf
     const T = S.toolkit;
     const WEB = "https://mdtareqabdullah.github.io/portfolio/";   // absolute, so links work from the PDF
     const pick = ["glowtide", "frostline", "ember", "mockup-suite"].map((id) => P.find((p) => p.id === id)).filter(Boolean);

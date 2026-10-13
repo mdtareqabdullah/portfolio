@@ -248,7 +248,7 @@
     const row = [];
     if (S.whatsapp) row.push(`<a class="btn v" href="https://wa.me/${esc(S.whatsapp)}" target="_blank" rel="noopener">WhatsApp</a>`);
     row.push(`<a class="btn ${S.whatsapp ? "" : "v"}" href="cv.html">View CV</a>`);
-    if (S.cvPdf) row.push(`<a class="btn" href="${esc(S.cvPdf)}" download>Download CV (PDF)</a>`);
+    if (S.cvPdf) row.push(`<a class="btn" href="${esc(S.cvPdf)}" download="${esc(S.name)}.pdf">Download CV (PDF)</a>`);
     links.forEach((l) => row.push(`<a class="btn" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`));
     $("#contactRow").innerHTML = row.join("");
 
