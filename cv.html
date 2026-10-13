@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <style>
+    @font-face { font-family: "Unbounded"; src: url("assets/fonts/Unbounded-VF.ttf"); font-weight: 200 900; }
+    @font-face { font-family: "Grotesk"; src: url("assets/fonts/SpaceGrotesk-VF.ttf"); font-weight: 300 700; }
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #2a2a2d; font-family: "Grotesk", sans-serif; color: #121214; font-size: 9.6pt; line-height: 1.45; }
+    .bar { position: sticky; top: 0; display: flex; justify-content: center; gap: 10px; padding: 14px; background: #0c0c0d; z-index: 5; }
+    .bar a, .bar button { font: 600 12px/1 "Grotesk"; letter-spacing: .14em; text-transform: uppercase; padding: 12px 18px; border-radius: 30px; border: 1.5px solid #efece4; color: #efece4; background: none; cursor: pointer; text-decoration: none; }
+    .bar .v { background: #d4ff2e; border-color: #d4ff2e; color: #0c0c0d; }
+    .page { width: 210mm; height: 297mm; overflow: hidden; margin: 24px auto; background: #fff; padding: 15mm 16mm 18mm; position: relative; box-shadow: 0 30px 60px rgba(0,0,0,.4); break-after: page; }
+    .page:last-child { break-after: auto; }
+    header { display: grid; grid-template-columns: auto 1fr auto; gap: 7mm; align-items: end; padding-bottom: 6mm; border-bottom: 2.5pt solid #121214; }
+    .pic { width: 26mm; height: 31mm; object-fit: cover; object-position: 50% 15%; border: .6pt solid #121214; }
+    h1 { font-family: "Unbounded"; font-weight: 600; font-size: 27pt; line-height: 1; letter-spacing: -.04em; }
+    h1 + p { font-size: 12.5pt; font-weight: 600; margin-top: 3.5mm; line-height: 1.35; }
+    h1 + p span { background: #d4ff2e; padding: 0 1.5mm; }
+    .no { font-family: "Unbounded"; font-weight: 600; letter-spacing: -.05em; font-size: 46pt; line-height: .8; color: #121214; text-align: right; }
+    .no small { display: block; font-family: "Grotesk"; font-size: 7pt; letter-spacing: .2em; text-transform: uppercase; margin-top: 2mm; color: #6b6b6b; }
+    .mini { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 4mm; border-bottom: 2.5pt solid #121214; margin-bottom: 8mm; }
+    .mini b { font-family: "Unbounded"; font-weight: 600; font-size: 15pt; letter-spacing: -.03em; }
+    .mini span { font-size: 8pt; letter-spacing: .2em; text-transform: uppercase; color: #6b6b6b; }
+    .contact { display: flex; flex-wrap: wrap; gap: 2mm 7mm; margin: 4.5mm 0 8mm; font-size: 9.4pt; color: #333; }
+    .contact b { font-weight: 600; color: #121214; }
+    .cols { display: grid; grid-template-columns: 56mm 1fr; gap: 11mm; }
+    h2 { font-size: 8.4pt; letter-spacing: .24em; text-transform: uppercase; font-weight: 700; margin: 0 0 3.6mm; padding-bottom: 1.8mm; border-bottom: .6pt solid #c8c8c8; }
+    section { margin-bottom: 7mm; }
+    .side ul { list-style: none; display: grid; gap: 1.4mm; }
+    .side li { font-size: 9.3pt; }
+    .side .grp { font-size: 7.6pt; letter-spacing: .16em; text-transform: uppercase; color: #6b6b6b; margin: 3.2mm 0 1.4mm; font-weight: 700; }
+    .side h2 + .grp { margin-top: 0; }
+    .side .edu li + li { margin-top: 2.4mm; }
+    .summary { font-size: 10pt; line-height: 1.55; }
+    .job { margin-bottom: 5.5mm; }
+    .job .t { display: flex; justify-content: space-between; gap: 4mm; font-weight: 700; font-size: 11.2pt; }
+    .job .t span { font-weight: 500; color: #6b6b6b; font-size: 9.2pt; white-space: nowrap; }
+    .job .o { color: #3b3b3b; font-size: 9.8pt; margin: .8mm 0 2mm; }
+    .job ul { padding-left: 4.5mm; display: grid; gap: 1.2mm; }
+    .job li { font-size: 9.5pt; }
+    .proj { display: grid; gap: 3mm; }
+    .proj div { display: grid; grid-template-columns: 32mm 1fr; gap: 4mm; font-size: 9.5pt; }
+    .proj b { font-weight: 700; }
+    .foot { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; justify-content: space-between; font-size: 7.6pt; letter-spacing: .14em; text-transform: uppercase; color: #8a8a8a; }
+    @media print { body { background: #fff; } .bar { display: none; } .page { margin: 0; box-shadow: none; } }
+  </style>
+</head>
+<body>
+  <div class="bar"><a href="index.html">← Portfolio</a><button class="v" onclick="print()">Print / Save as PDF</button><a href="cv.pdf" download>Download PDF</a></div>
+  <div id="cv"></div>
+  <script src="data/site.js"></script>
+  <script src="data/projects.js"></script>
+  <script>
+    const S = window.SITE, P = window.PROJECTS, e = (s) => String(s ?? "").replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+    document.title = `${S.name} — CV`;
+    const T = S.toolkit;
+    const pick = ["mockup-suite", "frostline"].map((id) => P.find((p) => p.id === id)).filter(Boolean);
+    const one = {
+      "mockup-suite": "Four apparel mockups modelled in CLO 3D and sold as editable PSDs, launched with four AI-composited campaign concepts that keep the original renders exact.",
+      "frostline": "Two winter campaigns from one product photo each — AI-composited scenes, 3 formats, stills + motion (36 assets), one brand system.",
+      "ember": "Same brand system, opposite mood — shows consistent branding across very different looks.",
+      "product-shots": "Store-ready e-commerce product photos made with AI before a single piece was produced.",
+      "product-drops": "A fixed social template that turned the brand feed into an online catalogue.",
+      "book-cover": "Print-ready book cover: front, back and spine, plus a 3D mockup.",
+      "poridheyo-brand": "Bilingual logo, wordmark and lockups used on kits, packaging, social and ads.",
+    };
+    const contact = [S.email && `<span><b>Email</b> ${e(S.email)}</span>`, S.phone && `<span><b>Phone</b> ${e(S.phone)}</span>`,
+      `<span><b>Based</b> ${e(S.location)}</span>`].filter(Boolean).join("");   // no links on the CV, by request
+    const side = [
+      `<section><h2>Skills</h2>
+        <div class="grp">AI imagery</div><ul><li>Realistic AI product images</li><li>Scene compositing</li><li>Upscaling &amp; format extension</li><li>AI video for ads</li></ul>
+        <div class="grp">Design</div><ul><li>Social &amp; marketing content</li><li>E-commerce product visuals</li><li>Brand identity &amp; systems</li><li>Bangla typography</li><li>Illustration</li><li>Print &amp; production files</li><li>Motion for social</li></ul>
+        <div class="grp">Apparel</div><ul><li>Sportswear &amp; apparel design</li><li>3D apparel mockups (CLO 3D)</li></ul></section>`,
+      `<section><h2>Tools</h2>${T.map((g) => `<div class="grp">${e(g.group)}</div><ul><li>${g.items.map(e).join(", ")}</li></ul>`).join("")}</section>`,
+      `<section><h2>Languages</h2><ul>${(S.languages || []).map((l) => `<li>${e(l.name)}${l.level ? " — " + e(l.level) : ""}</li>`).join("")}</ul></section>`,
+      (S.education || []).length ? `<section><h2>Education</h2><ul class="edu">${S.education.map((x) => `<li><b>${e(x.title)}</b><br>${e(x.org)}<br>${e(x.years)}</li>`).join("")}</ul></section>` : "",
+    ].filter(Boolean);
+    const job = (x) => `<div class="job"><div class="t">${e(x.title)}<span>${e(x.years)}</span></div><div class="o">${e(x.org)}</div><ul>${x.points.map((p) => `<li>${e(p)}</li>`).join("")}</ul></div>`;
+    // the Experience heading travels with the first job, so it never ends a page alone
+    const main = [
+      `<section><h2>Profile</h2><p class="summary">Graphic designer with <b>8 years of professional experience</b>: three years at Sahara IT, four years designing sportswear at MonoTex and SportsVilla, and <b>my own online apparel brand</b>, run alongside my jobs since 2022. I take work from brief to production-ready files — social and marketing content, brand identity, apparel and 3D mockups, print. Today I also build <b>realistic AI product imagery</b>: compositing real products into campaign scenes while keeping them exact, then delivering every format, still and animated. I work remotely in English with a daily EST overlap.</p></section>`,
+      ...S.experience.map((x, i) => i === 0 ? `<div class="exh"><h2>Experience</h2>${job(x)}</div>` : job(x)),
+      `<section style="margin-top:2mm"><h2>Selected work</h2><div class="proj">${pick.map((p) => `<div><b>${e(p.id === "frostline" ? "Frostline & Ember" : p.title)}</b><span>${e(one[p.id] || p.sub)}</span></div>`).join("")}</div></section>`,
+      `<section><h2>Stock contributor</h2><div class="proj"><div><b>Freepik · Adobe Stock</b><span>Contributor as Abdullah4mm. On Freepik: premium apparel mockups (PSD), each garment modelled in CLO 3D.</span></div></div></section>`,
+    ];
+    const foot = (n) => `<div class="foot"><span>${e(S.name)} — ${e(S.roleLong)}</span><span>${n} / 2</span></div>`;
+    document.getElementById("cv").innerHTML = `
+      <div class="page" id="p1">
+        <header>${S.photoPlain ? `<img class="pic" src="${e(S.photoPlain)}" alt="">` : ""}<div><h1>${e(S.name)}</h1><p><span>${e(S.roleLong)}</span> — ${e(S.focus)}</p></div>
+          <div class="no">${e(S.years)}<small>years designing</small></div></header>
+        <div class="contact">${contact}<span><b>Availability</b> ${e(S.availability)} · ${e(S.timezoneNote)}</span></div>
+        <div class="cols"><aside class="side"></aside><main></main></div>${foot(1)}</div>
+      <div class="page" id="p2">
+        <div class="mini"><b>${e(S.name)}</b><span>Curriculum vitae</span></div>
+        <div class="cols"><aside class="side"></aside><main></main></div>${foot(2)}</div>`;
+    // flow: fill page 1 in order; the first block that would cross its bottom margin, and everything after it, go to page 2
+    const flow = (blocks, sel) => {
+      const a = document.querySelector(`#p1 ${sel}`), b = document.querySelector(`#p2 ${sel}`);
+      const p1 = document.getElementById("p1");
+      const limit = p1.getBoundingClientRect().bottom - parseFloat(getComputedStyle(p1).paddingBottom);
+      let over = false;
+      for (const h of blocks) {
+        if (!over) {
+          a.insertAdjacentHTML("beforeend", h);
+          if (a.lastElementChild.getBoundingClientRect().bottom <= limit) continue;
+          a.lastElementChild.remove(); over = true;
+        }
+        b.insertAdjacentHTML("beforeend", h);
+      }
+      if (sel === "main" && !b.querySelector(".exh") && b.querySelector(".job")) b.insertAdjacentHTML("afterbegin", `<h2>Experience — continued</h2>`);
+    };
+    document.fonts.ready.then(() => { flow(side, ".side"); flow(main, "main"); document.body.dataset.ready = "1"; });
+  </script>
+</body>
+</html>
