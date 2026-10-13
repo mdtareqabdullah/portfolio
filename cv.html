@@ -59,11 +59,12 @@
     const S = window.SITE, P = window.PROJECTS, e = (s) => String(s ?? "").replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
     document.title = `${S.name} — CV`;
     const T = S.toolkit;
-    const pick = ["mockup-suite", "frostline"].map((id) => P.find((p) => p.id === id)).filter(Boolean);
+    const pick = ["glowtide", "frostline", "ember", "mockup-suite"].map((id) => P.find((p) => p.id === id)).filter(Boolean);
     const one = {
       "mockup-suite": "Four apparel mockups modelled in CLO 3D and sold as editable PSDs, launched with four AI-composited campaign concepts that keep the original renders exact.",
-      "frostline": "Two winter campaigns from one product photo each — AI-composited scenes, 3 formats, stills + motion (36 assets), one brand system.",
-      "ember": "Same brand system, opposite mood — shows consistent branding across very different looks.",
+      "glowtide": "A vitamin C serum brand built from a brief: wordmark, label and packshot, a 24-asset launch campaign, print (sell sheet, tri-fold, flyers, exhibition booth) and e-commerce pages with a marketplace listing.",
+      "frostline": "Winter campaign for a technical sneaker from one product photo: 3 AI-composited concepts × feed, story and banner, still + motion (18 assets).",
+      "ember": "Same brand system, opposite mood: a cosy winter campaign that stays on-brand without looking the same twice.",
       "product-shots": "Store-ready e-commerce product photos made with AI before a single piece was produced.",
       "product-drops": "A fixed social template that turned the brand feed into an online catalogue.",
       "book-cover": "Print-ready book cover: front, back and spine, plus a 3D mockup.",
@@ -85,7 +86,7 @@
     const main = [
       `<section><h2>Profile</h2><p class="summary">Graphic designer with <b>8 years of professional experience</b>: three years at Sahara IT, four years designing sportswear at MonoTex and SportsVilla, and <b>my own online apparel brand</b>, run alongside my jobs since 2022. I take work from brief to production-ready files — social and marketing content, brand identity, apparel and 3D mockups, print. Today I also build <b>realistic AI product imagery</b>: compositing real products into campaign scenes while keeping them exact, then delivering every format, still and animated. I work remotely in English with a daily EST overlap.</p></section>`,
       ...S.experience.map((x, i) => i === 0 ? `<div class="exh"><h2>Experience</h2>${job(x)}</div>` : job(x)),
-      `<section style="margin-top:2mm"><h2>Selected work</h2><div class="proj">${pick.map((p) => `<div><b>${e(p.id === "frostline" ? "Frostline & Ember" : p.title)}</b><span>${e(one[p.id] || p.sub)}</span></div>`).join("")}</div></section>`,
+      `<section style="margin-top:2mm"><h2>Selected work</h2><div class="proj">${pick.map((p) => `<div><b>${e(p.title)}</b><span>${e(one[p.id] || p.sub)}</span></div>`).join("")}</div></section>`,
       `<section><h2>Stock contributor</h2><div class="proj"><div><b>Freepik · Adobe Stock</b><span>Contributor as Abdullah4mm. On Freepik: premium apparel mockups (PSD), each garment modelled in CLO 3D.</span></div></div></section>`,
     ];
     const foot = (n) => `<div class="foot"><span>${e(S.name)} — ${e(S.roleLong)}</span><span>${n} / 2</span></div>`;
