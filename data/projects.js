@@ -9,50 +9,6 @@ const V = (p) => ({ video: "assets/video/" + p + ".mp4", poster: "assets/video/"
 
 window.PROJECTS = [
   {
-    id: "nectara", title: "Nectara", sub: "Wild Sundarbans honey — a brand, a wrap-around label and a raw documentary campaign",
-    client: "Nectara (demo brand)", year: "2026", concept: true,
-    cats: ["Food", "Packaging", "Campaign", "Motion"],
-    role: "Brand & packaging design, art direction, photo manipulation & compositing, typography, motion",
-    tools: ["Photoshop", "FLUX.2", "Krea 2", "Qwen-Image-Edit", "ComfyUI", "HTML/CSS (label, layout & motion)"],
-    cover: I("nectara/river_portrait"), coverVideo: "assets/video/nectara/river_story.mp4", accent: "#EBA63E",
-    brief: "Raw wild honey from the Sundarbans, the largest mangrove forest on Earth, for an international shelf. " +
-      "A name, an English identity and a label, then a campaign that feels real and raw — jungle, river, wild bees and honey — " +
-      "built as photo manipulation, not as a template.",
-    approach: "The research set the tone: the honey is cut by hand every April and May from combs of the giant rock bee, a bee that has " +
-      "never been farmed, by honey hunters who go upriver by boat through a forest the tide floods twice a day. So the brand stays " +
-      "documentary — a quiet Gloock wordmark, a real mangrove photograph on the label — and carries one idea: the label wraps the whole " +
-      "jar and its creek is cut away, so the honey inside becomes the river and the boat floats on it. The campaign takes that river " +
-      "outside the jar, then follows the honey back to its source: the wild comb, the flooding tide, the hunters' boat. Every scene is " +
-      "built around the jar, and the real packshot goes back in, relit to match.",
-    outcome: "Name, wordmark, wrap-around label and packshot · 4 concepts × 3 formats, still + motion = 24 assets · case-study board. " +
-      "Concept work: Nectara is a demo brand.",
-    before: I("nectara/jar"), after: I("nectara/river_portrait"),
-    gallery: [
-      { section: "The brand", text: "A name that sounds like nectar and travels well, a natural serif, and a label that wraps the whole jar: a real mangrove creek whose water is cut away, so the honey shows through as the river." },
-      { src: I("nectara/wordmark"), fmt: "Wordmark", cap: "Gloock + Manrope" },
-      { src: I("nectara/label"), fmt: "Label", cap: "Wrap-around, flat: the creek is cut away" },
-      { src: I("nectara/jar"), fmt: "Packshot", cap: "On the jar, the honey becomes the river", contain: true },
-      { section: "The campaign", text: "The river from the label, outside the jar — then back to its source: the wild comb, the tide, the boat that brings it home." },
-      { src: I("nectara/river_portrait"), fmt: "Feed 4:5", cap: "Where the river runs gold." },
-      { src: I("nectara/comb_portrait"), fmt: "Feed 4:5", cap: "Ten thousand bees. One jar." },
-      { src: I("nectara/tide_portrait"), fmt: "Feed 4:5", cap: "Twice a day, the forest floods." },
-      { src: I("nectara/upriver_portrait"), fmt: "Feed 4:5", cap: "Cut by hand. Days upriver." },
-      { ...V("nectara/river_story"), fmt: "Story 9:16", cap: "Animated" },
-      { ...V("nectara/comb_story"), fmt: "Story 9:16", cap: "Animated" },
-      { ...V("nectara/tide_story"), fmt: "Story 9:16", cap: "Animated" },
-      { ...V("nectara/upriver_story"), fmt: "Story 9:16", cap: "Animated" },
-      { ...V("nectara/river_landscape"), fmt: "Banner 16:9", cap: "Animated", wide: true },
-      { src: I("nectara/comb_landscape"), fmt: "Banner 16:9", wide: true },
-      { ...V("nectara/tide_landscape"), fmt: "Banner 16:9", cap: "Animated", wide: true },
-      { src: I("nectara/upriver_landscape"), fmt: "Banner 16:9", wide: true },
-      { section: "Process", text: "The jar is placed on an empty canvas, the scene is built around it, and the real packshot — label and all — goes back over the redraw, relit to the scene's light." },
-      { src: I("nectara/comp"), fmt: "Step 1", cap: "The jar placed on the canvas" },
-      { src: I("nectara/scene"), fmt: "Step 2", cap: "Scene built around it" },
-      { src: I("nectara/key"), fmt: "Step 3", cap: "The real jar back in, relit" },
-      { src: I("nectara/board"), fmt: "Case-study board", tall: true },
-    ],
-  },
-  {
     id: "glowtide", title: "Glowtide", sub: "A vitamin C serum brand — label, launch campaign, print and e-commerce",
     client: "Glowtide (demo brand)", year: "2026", concept: true,
     cats: ["Beauty", "Packaging", "Campaign", "Print", "Web & e-commerce"],
@@ -169,6 +125,50 @@ window.PROJECTS = [
       { src: I("ember/product"), fmt: "Input", cap: "Product photo" },
       { src: I("ember/scene_cocoa"), fmt: "Step 3", cap: "Composited scene" },
       { src: I("ember/board"), fmt: "Case-study board", tall: true },
+    ],
+  },
+  {
+    id: "nectara", title: "Nectara", sub: "Wild Sundarbans honey — a brand, a wrap-around label and a raw documentary campaign",
+    client: "Nectara (demo brand)", year: "2026", concept: true,
+    cats: ["Food", "Packaging", "Campaign", "Motion"],
+    role: "Brand & packaging design, art direction, photo manipulation & compositing, typography, motion",
+    tools: ["Photoshop", "FLUX.2", "Krea 2", "Qwen-Image-Edit", "ComfyUI", "HTML/CSS (label, layout & motion)"],
+    cover: I("nectara/river_portrait"), coverVideo: "assets/video/nectara/river_story.mp4", accent: "#EBA63E",
+    brief: "Raw wild honey from the Sundarbans, the largest mangrove forest on Earth, for an international shelf. " +
+      "A name, an English identity and a label, then a campaign that feels real and raw — jungle, river, wild bees and honey — " +
+      "built as photo manipulation, not as a template.",
+    approach: "The research set the tone: the honey is cut by hand every April and May from combs of the giant rock bee, a bee that has " +
+      "never been farmed, by honey hunters who go upriver by boat through a forest the tide floods twice a day. So the brand stays " +
+      "documentary — a quiet Gloock wordmark, a real mangrove photograph on the label — and carries one idea: the label wraps the whole " +
+      "jar and its creek is cut away, so the honey inside becomes the river and the boat floats on it. The campaign takes that river " +
+      "outside the jar, then follows the honey back to its source: the wild comb, the flooding tide, the hunters' boat. Every scene is " +
+      "built around the jar, and the real packshot goes back in, relit to match.",
+    outcome: "Name, wordmark, wrap-around label and packshot · 4 concepts × 3 formats, still + motion = 24 assets · case-study board. " +
+      "Concept work: Nectara is a demo brand.",
+    before: I("nectara/jar"), after: I("nectara/river_portrait"),
+    gallery: [
+      { section: "The brand", text: "A name that sounds like nectar and travels well, a natural serif, and a label that wraps the whole jar: a real mangrove creek whose water is cut away, so the honey shows through as the river." },
+      { src: I("nectara/wordmark"), fmt: "Wordmark", cap: "Gloock + Manrope" },
+      { src: I("nectara/label"), fmt: "Label", cap: "Wrap-around, flat: the creek is cut away" },
+      { src: I("nectara/jar"), fmt: "Packshot", cap: "On the jar, the honey becomes the river", contain: true },
+      { section: "The campaign", text: "The river from the label, outside the jar — then back to its source: the wild comb, the tide, the boat that brings it home." },
+      { src: I("nectara/river_portrait"), fmt: "Feed 4:5", cap: "Where the river runs gold." },
+      { src: I("nectara/comb_portrait"), fmt: "Feed 4:5", cap: "Ten thousand bees. One jar." },
+      { src: I("nectara/tide_portrait"), fmt: "Feed 4:5", cap: "Twice a day, the forest floods." },
+      { src: I("nectara/upriver_portrait"), fmt: "Feed 4:5", cap: "Cut by hand. Days upriver." },
+      { ...V("nectara/river_story"), fmt: "Story 9:16", cap: "Animated" },
+      { ...V("nectara/comb_story"), fmt: "Story 9:16", cap: "Animated" },
+      { ...V("nectara/tide_story"), fmt: "Story 9:16", cap: "Animated" },
+      { ...V("nectara/upriver_story"), fmt: "Story 9:16", cap: "Animated" },
+      { ...V("nectara/river_landscape"), fmt: "Banner 16:9", cap: "Animated", wide: true },
+      { src: I("nectara/comb_landscape"), fmt: "Banner 16:9", wide: true },
+      { ...V("nectara/tide_landscape"), fmt: "Banner 16:9", cap: "Animated", wide: true },
+      { src: I("nectara/upriver_landscape"), fmt: "Banner 16:9", wide: true },
+      { section: "Process", text: "The jar is placed on an empty canvas, the scene is built around it, and the real packshot — label and all — goes back over the redraw, relit to the scene's light." },
+      { src: I("nectara/comp"), fmt: "Step 1", cap: "The jar placed on the canvas" },
+      { src: I("nectara/scene"), fmt: "Step 2", cap: "Scene built around it" },
+      { src: I("nectara/key"), fmt: "Step 3", cap: "The real jar back in, relit" },
+      { src: I("nectara/board"), fmt: "Case-study board", tall: true },
     ],
   },
   {
@@ -289,10 +289,10 @@ window.WALL = [
 
 /* Hero stage: input photo -> delivered visual. */
 window.PAIRS = [
-  { name: "Nectara — Where the river runs gold", input: I("nectara/jar"), output: I("nectara/river_portrait"), id: "nectara" },
   { name: "Glowtide — Day 1 to day 21", input: I("glowtide/bottle"), output: I("glowtide/split_portrait"), id: "glowtide" },
   { name: "Frostline — Break the ice", input: I("frostline/product"), output: I("frostline/ice_portrait"), id: "frostline" },
   { name: "Ember — Best served warm", input: I("ember/product"), output: I("ember/cocoa_portrait"), id: "ember" },
+  { name: "Nectara — Where the river runs gold", input: I("nectara/jar"), output: I("nectara/river_portrait"), id: "nectara" },
   { name: "Mockup Suite — Modelled in 3D", input: I("mockups/align_jersey"), output: I("mockups/align_jersey_out"), id: "mockup-suite", full: true },
   { name: "Glowtide — Catch the glow tide", input: I("glowtide/bottle"), output: I("glowtide/tide_portrait"), id: "glowtide" },
   { name: "Frostline — Land hard", input: I("frostline/product"), output: I("frostline/burst_portrait"), id: "frostline" },
