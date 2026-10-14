@@ -293,11 +293,11 @@ window.PAIRS = [
   { name: "Glowtide — Day 1 to day 21", input: I("glowtide/bottle"), output: I("glowtide/split_portrait"), id: "glowtide" },
   { name: "Frostline — Break the ice", input: I("frostline/product"), output: I("frostline/ice_portrait"), id: "frostline" },
   { name: "Ember — Best served warm", input: I("ember/product"), output: I("ember/cocoa_portrait"), id: "ember" },
-  { name: "Nectara — Where the river runs gold", input: I("nectara/jar"), output: I("nectara/river_portrait"), id: "nectara" },
+  { name: "Nectara — Where the river runs gold", input: I("nectara/in_river"), output: I("nectara/river_portrait"), id: "nectara", full: true },
   { name: "Mockup Suite — Modelled in 3D", input: I("mockups/align_jersey"), output: I("mockups/align_jersey_out"), id: "mockup-suite", full: true },
   { name: "Glowtide — Catch the glow tide", input: I("glowtide/bottle"), output: I("glowtide/tide_portrait"), id: "glowtide" },
   { name: "Frostline — Land hard", input: I("frostline/product"), output: I("frostline/burst_portrait"), id: "frostline" },
   { name: "Ember — Come in from the cold", input: I("ember/product"), output: I("ember/village_portrait"), id: "ember" },
-  { name: "Nectara — Ten thousand bees", input: I("nectara/jar"), output: I("nectara/comb_portrait"), id: "nectara" },
+  { name: "Nectara — Ten thousand bees", input: I("nectara/in_comb"), output: I("nectara/comb_portrait"), id: "nectara", full: true },
   { name: "Mockup Suite — Exhibit A", input: I("mockups/align_mannequin"), output: I("mockups/align_mannequin_out"), id: "mockup-suite", full: true },
 ];
