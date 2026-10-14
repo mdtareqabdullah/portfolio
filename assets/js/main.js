@@ -277,7 +277,7 @@
           <div><dt>Role</dt><dd>${esc(p.role)}</dd></div><div><dt>Tools</dt><dd>${p.tools.map(esc).join(", ")}</dd></div></dl>
       </div></section>
       <div class="wrap">
-        <div class="cs-cover rv"><div class="fl"><span>Cover</span><b>${esc(p.title)}</b></div><div class="crops"><div class="media"><img src="${p.cover}" alt="${esc(p.title)}"></div></div></div>
+        <div class="cs-cover rv"><div class="fl"><span>Cover</span><b>${esc(p.title)}</b></div><div class="crops"><div class="media"><img src="${p.coverWide || p.cover}" alt="${esc(p.title)}"></div></div></div>
         <div class="cs-text rv"><div><h3>Brief</h3><p>${esc(p.brief)}</p></div><div><h3>Approach</h3><p>${esc(p.approach)}</p></div><div><h3>Outcome</h3><p>${esc(p.outcome)}</p>${(p.links || []).length ? `<p class="cs-links">${p.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</p>` : ""}</div></div>
         ${p.before ? `<div class="cs-compare rv"><div class="stage" id="cmp"><div class="fl"><span>input → delivered</span><b>Drag</b></div><div class="crops"><div class="board" data-cursor="Drag"><img class="in" alt=""><div class="outw"><img class="out" alt=""></div><div class="scan"></div><span class="chip l">Input</span><span class="chip r">Delivered</span></div></div></div>
           <div><div class="label">Before / after</div><h2>${p.compareHead || `One product photo <span class="it" style="color:var(--accent)">in</span>`}</h2><p style="color:var(--chalk-2);max-width:460px">${esc(p.compareText || "The product is the real photo, kept exact. The world around it is composited, then designed.")}</p></div></div>` : ""}

@@ -1,5 +1,6 @@
 /* =====================================================================================================
    PROJECTS — one object per case study. Order here = order on the home page.
+   cover = the home-grid card (4:5); coverWide = the case page's Cover section (16:9).
    concept: true -> labelled "Concept" (self-initiated / spec work, not a paid client job).
    A gallery item is an image {src} or a video {video, poster}; fmt is the frame label ("Feed 4:5").
    Lines marked // EDIT need your confirmation.
@@ -14,7 +15,7 @@ window.PROJECTS = [
     cats: ["Beauty", "Packaging", "Campaign", "Print", "Web & e-commerce"],
     role: "Brand & packaging design, art direction, compositing, typography, motion, print & exhibition design, web & e-commerce design",
     tools: ["Photoshop", "FLUX.2", "Krea 2", "Qwen-Image-Edit", "ComfyUI", "HTML/CSS (layout, print & motion)"],
-    cover: I("glowtide/split_portrait"), coverVideo: "assets/video/glowtide/split_story.mp4", accent: "#FF9A4D",
+    cover: I("glowtide/split_portrait"), coverWide: I("glowtide/split_landscape"), coverVideo: "assets/video/glowtide/split_story.mp4", accent: "#FF9A4D",
     brief: "A $28 vitamin C brightening serum for women aged 22 to 35 in the US and UK. One hook — “My dark spots after 21 days 👀” — " +
       "and one creative angle: a before/after split screen with a close-up of the dropper and the serum's texture.",
     approach: "There was no product, so I built one: the Glowtide name and wordmark (a sun rising on the tide), the label, and the bottle " +
@@ -77,7 +78,7 @@ window.PROJECTS = [
     cats: ["AI Imagery", "Campaign", "Social", "Motion"],
     role: "Art direction, AI compositing, typography, motion",
     tools: ["FLUX.2", "Qwen-Image-Edit", "ComfyUI", "Photoshop", "HTML/CSS motion"],
-    cover: I("frostline/ice_portrait"), coverVideo: "assets/video/frostline/ice_story.mp4", accent: "#8AD8FF",
+    cover: I("frostline/ice_portrait"), coverWide: I("frostline/ice_landscape"), coverVideo: "assets/video/frostline/ice_story.mp4", accent: "#8AD8FF",
     brief: "Launch a waterproof winter sneaker on social with one product photo and no photoshoot.",
     approach: "Three impossible winter moments — breaking out of glacier ice, landing in a powder burst, standing as a mountain " +
       "that climbers scale. Each scene is composited around the real product so it stays exact; the headline sits behind " +
@@ -106,7 +107,7 @@ window.PROJECTS = [
     cats: ["AI Imagery", "Campaign", "Social", "Motion"],
     role: "Art direction, AI compositing, typography, motion",
     tools: ["FLUX.2", "Qwen-Image-Edit", "ComfyUI", "HTML/CSS motion"],
-    cover: I("ember/cocoa_portrait"), coverVideo: "assets/video/ember/cocoa_story.mp4", accent: "#F2A65A",
+    cover: I("ember/cocoa_portrait"), coverWide: I("ember/cocoa_landscape"), coverVideo: "assets/video/ember/cocoa_story.mp4", accent: "#F2A65A",
     brief: "Sell warmth, not toughness — with the same brand system as Frostline.",
     approach: "A fireside morning, a mug of hot chocolate, a tiny snowed-in village where the sneaker is the warmest house in town. " +
       "A soft editorial serif, firelight tones and slow motion set it apart while it stays one brand.",
@@ -133,7 +134,7 @@ window.PROJECTS = [
     cats: ["Food", "Packaging", "Campaign", "Motion"],
     role: "Brand & packaging design, art direction, photo manipulation & compositing, typography, motion",
     tools: ["Photoshop", "FLUX.2", "Krea 2", "Qwen-Image-Edit", "ComfyUI", "HTML/CSS (label, layout & motion)"],
-    cover: I("nectara/river_portrait"), coverVideo: "assets/video/nectara/river_story.mp4", accent: "#EBA63E",
+    cover: I("nectara/river_portrait"), coverWide: I("nectara/river_landscape"), coverVideo: "assets/video/nectara/river_story.mp4", accent: "#EBA63E",
     brief: "Raw wild honey from the Sundarbans, the largest mangrove forest on Earth, for an international shelf. " +
       "A name, an English identity and a label, then a campaign that feels real and raw — jungle, river, wild bees and honey — " +
       "built as photo manipulation, not as a template.",
@@ -178,7 +179,7 @@ window.PROJECTS = [
     cats: ["3D Mockups", "Product", "Campaign", "Motion"],
     role: "3D garment modelling, PSD mockup build, art direction, compositing, typography, motion",
     tools: ["CLO 3D", "Photoshop", "FLUX.2", "Qwen-Image-Edit", "ComfyUI", "HTML/CSS motion"],
-    cover: I("mockups/floodlight_portrait"), coverVideo: "assets/video/mockups/floodlight_story.mp4", accent: "#E9D9A6",
+    cover: I("mockups/floodlight_portrait"), coverWide: I("mockups/floodlight_landscape"), coverVideo: "assets/video/mockups/floodlight_story.mp4", accent: "#E9D9A6",
     brief: "Four apparel mockups I built from scratch and sell as premium PSDs: each garment modelled and draped in CLO 3D, " +
       "rendered, then finished in Photoshop with fully editable layers. The print on every shirt is only a placeholder — " +
       "buyers drop their own artwork in — so the thing to sell is the model itself: the cut, the drape, the folds and the light.",
@@ -231,7 +232,7 @@ window.PROJECTS = [
     cats: ["Typography", "Lettering", "Personal"],
     role: "Hand lettering, illustration, poster design",
     tools: ["Photoshop", "Illustrator"], // EDIT: the tools the posters were made with
-    cover: I("bangla/cover_portrait"), coverVideo: "assets/video/bangla/reel_story.mp4", accent: "#C9A36A",
+    cover: I("bangla/cover_portrait"), coverWide: I("bangla/cover_landscape"), coverVideo: "assets/video/bangla/reel_story.mp4", accent: "#C9A36A",
     brief: "Personal work: twenty-eight Bangla quote posters — Quran verses, lines about love and waiting, short reflections, " +
       "a little satire — every word hand-lettered, each with the illustration and colour its line asks for. Published on Behance in March 2023.",
     approach: "An archive project, presented again. The posters are shown exactly as they were made — upscaled 2x with a non-generative " +
