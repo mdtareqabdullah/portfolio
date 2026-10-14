@@ -140,9 +140,10 @@ window.PROJECTS = [
     approach: "The research set the tone: the honey is cut by hand every April and May from combs of the giant rock bee, a bee that has " +
       "never been farmed, by honey hunters who go upriver by boat through a forest the tide floods twice a day. So the brand stays " +
       "documentary — a quiet Gloock wordmark, a real mangrove photograph on the label — and carries one idea: the label wraps the whole " +
-      "jar and its creek is cut away, so the honey inside becomes the river and the boat floats on it. The campaign takes that river " +
-      "outside the jar, then follows the honey back to its source: the wild comb, the flooding tide, the hunters' boat. Every scene is " +
-      "built around the jar, and the real packshot goes back in, relit to match.",
+      "jar and its creek is cut away, so the honey inside becomes the river and the boat floats on it. The campaign is presented as a " +
+      "field journal rather than an ad grid: every frame is a field note, with hand-written observations pinned to what is in the " +
+      "picture, GPS and time stamped, and the headline set on a paper band. The jar is the lit subject of every scene, built around " +
+      "the real packshot and relit to match.",
     outcome: "Name, wordmark, wrap-around label and packshot · 4 concepts × 3 formats, still + motion = 24 assets · case-study board. " +
       "Concept work: Nectara is a demo brand.",
     before: I("nectara/jar"), after: I("nectara/river_portrait"),
@@ -151,7 +152,7 @@ window.PROJECTS = [
       { src: I("nectara/wordmark"), fmt: "Wordmark", cap: "Gloock + Manrope" },
       { src: I("nectara/label"), fmt: "Label", cap: "Wrap-around, flat: the creek is cut away" },
       { src: I("nectara/jar"), fmt: "Packshot", cap: "On the jar, the honey becomes the river", contain: true },
-      { section: "The campaign", text: "The river from the label, outside the jar — then back to its source: the wild comb, the tide, the boat that brings it home." },
+      { section: "The campaign — four field notes", text: "The river from the label, outside the jar — then back to its source: the wild comb, the tide, the boat that brings it home. Each frame is a page of a field journal: notes in hand, coordinates and time, the headline on paper." },
       { src: I("nectara/river_portrait"), fmt: "Feed 4:5", cap: "Where the river runs gold." },
       { src: I("nectara/comb_portrait"), fmt: "Feed 4:5", cap: "Ten thousand bees. One jar." },
       { src: I("nectara/tide_portrait"), fmt: "Feed 4:5", cap: "Twice a day, the forest floods." },
