@@ -146,7 +146,7 @@ window.PROJECTS = [
       "the real packshot and relit to match.",
     outcome: "Name, wordmark, wrap-around label and packshot · 4 concepts × 3 formats, still + motion = 24 assets · case-study board. " +
       "Concept work: Nectara is a demo brand.",
-    before: I("nectara/jar"), after: I("nectara/river_portrait"),
+    before: I("nectara/in_river"), after: I("nectara/river_portrait"), beforeFull: true,
     gallery: [
       { section: "The brand", text: "A name that sounds like nectar and travels well, a natural serif, and a label that wraps the whole jar: a real mangrove creek whose water is cut away, so the honey shows through as the river." },
       { src: I("nectara/wordmark"), fmt: "Wordmark", cap: "Gloock + Manrope" },
