@@ -203,8 +203,7 @@
     // experience
     $("#nums").innerHTML = S.stats.map((s) => `<div><b>${esc(s.n)}</b><span>${esc(s.label)}</span></div>`).join("");
     $("#timeline").innerHTML = S.experience.map((x) => `<article class="rv"><div class="yrs">${esc(x.years)}</div><div><h3>${esc(x.title)}</h3><h4>${esc(x.org)}</h4>
-      <ul>${x.points.map((p) => `<li>${esc(p)}</li>`).join("")}</ul></div></article>`).join("") +
-      (S.education || []).map((x) => `<article class="rv"><div class="yrs">${esc(x.years)}</div><div><h3>${esc(x.title)}</h3><h4>${esc(x.org)}</h4></div></article>`).join("");
+      <ul>${x.points.map((p) => `<li>${esc(p)}</li>`).join("")}</ul></div></article>`).join("");   // jobs only: education is on the CV, not the site
 
     // toolkit: a layers panel
     const eye = `<svg class="eye" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8s2.6-5 7-5 7 5 7 5-2.6 5-7 5-7-5-7-5Z"/><circle cx="8" cy="8" r="2.2"/></svg>`;
