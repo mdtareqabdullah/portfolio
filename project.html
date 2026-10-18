@@ -4,22 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Project</title>
-  <meta name="theme-color" content="#0c0c0d">
+  <meta name="theme-color" content="#fafaf8">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css?v=202610160057">
+  <script>try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}</script>
+  <link rel="stylesheet" href="assets/css/style.css?v=202610190035">
 </head>
-<body class="grain" data-page="project">
-  <div class="cursor"><span>View</span></div>
+<body data-page="project">
   <header class="top" id="top">
-    <a href="index.html" class="brand"><i class="mark"><img src="assets/img/logo-neon.svg" alt=""></i><span><b data-site="name"></b><small data-site="role"></small></span></a>
-    <nav class="nav"><a href="index.html#work">Work</a><a href="index.html#creatives">Creatives</a><a href="index.html#motion">Motion</a><a href="index.html#lab">AI Lab</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
-    <div class="top-r"><span class="avail" data-site="availability"></span><a class="btn sm v" href="cv.html">CV</a></div>
+    <a href="index.html" class="brand"><img class="mark on-light" src="assets/img/logo-mark.svg" alt=""><img class="mark on-dark" src="assets/img/logo.svg" alt=""><span><b data-site="name"></b><small data-site="role"></small></span></a>
+    <nav class="nav"><a href="index.html#work">Work</a><a href="index.html#lab">AI Lab</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
+    <div class="top-r">
+      <span class="avail" data-site="availability"></span>
+      <button class="theme" id="theme" aria-label="Switch light / dark"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg></button>
+      <a class="btn sm v" href="cv.html">CV</a>
+    </div>
   </header>
   <main id="cs"></main>
   <footer class="f"><span>© <span id="yr"></span> <span data-site="name"></span></span><span id="flinks"></span><a href="index.html#contact">Get in touch →</a></footer>
   <div class="lightbox" id="lightbox"></div>
-  <script src="data/site.js?v=202610141948"></script>
-  <script src="data/projects.js?v=202610141948"></script>
-  <script src="assets/js/main.js?v=202610160057"></script>
+  <script src="data/site.js?v=202610190035"></script>
+  <script src="data/projects.js?v=202610190035"></script>
+  <script src="assets/js/main.js?v=202610190035"></script>
 </body>
 </html>

@@ -6,25 +6,24 @@
   <title>CV</title>
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <style>
-    @font-face { font-family: "Unbounded"; src: url("assets/fonts/Unbounded-VF.ttf"); font-weight: 200 900; }
-    @font-face { font-family: "Grotesk"; src: url("assets/fonts/SpaceGrotesk-VF.ttf"); font-weight: 300 700; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-VF.woff2") format("woff2"); font-weight: 100 900; }
     @page { size: A4; margin: 0; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #2a2a2d; font-family: "Grotesk", sans-serif; color: #121214; font-size: 9.6pt; line-height: 1.45; }
+    body { background: #2a2a2d; font-family: "Inter", sans-serif; color: #121214; font-size: 9.6pt; line-height: 1.45; }
     .bar { position: sticky; top: 0; display: flex; justify-content: center; gap: 10px; padding: 14px; background: #0c0c0d; z-index: 5; }
-    .bar a, .bar button { font: 600 12px/1 "Grotesk"; letter-spacing: .14em; text-transform: uppercase; padding: 12px 18px; border-radius: 30px; border: 1.5px solid #efece4; color: #efece4; background: none; cursor: pointer; text-decoration: none; }
-    .bar .v { background: #d4ff2e; border-color: #d4ff2e; color: #0c0c0d; }
+    .bar a, .bar button { font: 600 12px/1 "Inter"; letter-spacing: .14em; text-transform: uppercase; padding: 12px 18px; border-radius: 30px; border: 1.5px solid #efece4; color: #efece4; background: none; cursor: pointer; text-decoration: none; }
+    .bar .v { background: #efece4; border-color: #efece4; color: #0c0c0d; }
     .page { width: 210mm; height: 297mm; overflow: hidden; margin: 24px auto; background: #fff; padding: 15mm 16mm 18mm; position: relative; box-shadow: 0 30px 60px rgba(0,0,0,.4); break-after: page; }
     .page:last-child { break-after: auto; }
     header { display: grid; grid-template-columns: auto 1fr auto; gap: 7mm; align-items: end; padding-bottom: 6mm; border-bottom: 2.5pt solid #121214; }
     .pic { width: 26mm; height: 31mm; object-fit: cover; object-position: 50% 15%; border: .6pt solid #121214; }
-    h1 { font-family: "Unbounded"; font-weight: 600; font-size: 27pt; line-height: 1; letter-spacing: -.04em; }
+    h1 { font-family: "Inter"; font-weight: 600; font-size: 27pt; line-height: 1; letter-spacing: -.04em; }
     h1 + p { font-size: 12.5pt; font-weight: 600; margin-top: 3.5mm; line-height: 1.35; }
-    h1 + p span { background: #d4ff2e; padding: 0 1.5mm; }
-    .no { font-family: "Unbounded"; font-weight: 600; letter-spacing: -.05em; font-size: 46pt; line-height: .8; color: #121214; text-align: right; }
-    .no small { display: block; font-family: "Grotesk"; font-size: 7pt; letter-spacing: .2em; text-transform: uppercase; margin-top: 2mm; color: #6b6b6b; }
+    h1 + p span { color: #85837e; }
+    .no { font-family: "Inter"; font-weight: 600; letter-spacing: -.05em; font-size: 46pt; line-height: .8; color: #121214; text-align: right; }
+    .no small { display: block; font-family: "Inter"; font-size: 7pt; letter-spacing: .2em; text-transform: uppercase; margin-top: 2mm; color: #6b6b6b; }
     .mini { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 4mm; border-bottom: 2.5pt solid #121214; margin-bottom: 8mm; }
-    .mini b { font-family: "Unbounded"; font-weight: 600; font-size: 15pt; letter-spacing: -.03em; }
+    .mini b { font-family: "Inter"; font-weight: 600; font-size: 15pt; letter-spacing: -.03em; }
     .mini span { font-size: 8pt; letter-spacing: .2em; text-transform: uppercase; color: #6b6b6b; }
     .contact { display: flex; flex-wrap: wrap; gap: 2mm 7mm; margin: 4.5mm 0 8mm; font-size: 9.4pt; color: #333; }
     .contact b { font-weight: 600; color: #121214; }

@@ -8,94 +8,62 @@
   <meta property="og:title" content="Md. Tareque Abdullah — Creative Designer">
   <meta property="og:description" content="AI product imagery, campaigns, social, brand, print and web.">
   <meta property="og:image" content="assets/img/frostline/ice_landscape.webp">
-  <meta name="theme-color" content="#0b0b0c">
+  <meta name="theme-color" content="#fafaf8">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css?v=202610160057">
+  <script>try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}</script>
+  <link rel="stylesheet" href="assets/css/style.css?v=202610190035">
 </head>
-<body class="grain">
-  <div class="cursor"><span>View</span></div>
-
+<body>
   <header class="top" id="top">
-    <a href="#" class="brand"><i class="mark"><img src="assets/img/logo-neon.svg" alt=""></i><span><b data-site="name"></b><small data-site="role"></small></span></a>
-    <nav class="nav">
-      <a href="#work">Work</a><a href="#creatives">Creatives</a><a href="#motion">Motion</a><a href="#lab">AI Lab</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
-    </nav>
+    <a href="#" class="brand"><img class="mark on-light" src="assets/img/logo-mark.svg" alt=""><img class="mark on-dark" src="assets/img/logo.svg" alt=""><span><b data-site="name"></b><small data-site="role"></small></span></a>
+    <nav class="nav"><a href="#work">Work</a><a href="#lab">AI Lab</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
     <div class="top-r">
       <span class="avail" data-site="availability"></span>
+      <button class="theme" id="theme" aria-label="Switch light / dark"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg></button>
       <a class="btn sm v" href="cv.html">CV <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg></a>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero canvas-bg">
+  <section class="hero">
     <div class="wrap">
       <div>
-        <div class="fl" style="max-width:560px"><span>Hero</span><b data-site="focus"></b></div>
-        <h1 id="h1"></h1>
+        <h1>Creative designer for brands that <span class="it">sell.</span></h1>
         <p class="intro" data-site="intro"></p>
         <div class="ctas">
           <a class="btn v" href="#work">See the work <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
           <a class="btn" href="#contact">Get in touch</a>
         </div>
-        <div class="stats" id="stats"></div>
       </div>
       <div class="stage" id="stage">
         <div class="fl"><span id="stageName">input.png → delivered</span><b>Feed 4:5</b></div>
-        <div class="crops">
-          <div class="board" data-cursor="Drag">
-            <img class="in" alt="Input product photo">
-            <div class="outw"><img class="out" alt="Delivered campaign visual"></div>
-            <div class="scan"></div>
-            <span class="chip l">Input · 1 photo</span><span class="chip r">Delivered</span>
-          </div>
+        <div class="board">
+          <img class="in" alt="Input product photo">
+          <div class="outw"><img class="out" alt="Delivered campaign visual"></div>
+          <div class="scan"></div>
+          <span class="chip l">Input · 1 photo</span><span class="chip r">Delivered</span>
         </div>
         <div class="read"><span>One product photo in → a finished, on-brand campaign visual out. <b>Drag to compare.</b></span><div class="dots" id="dots"></div></div>
       </div>
     </div>
-    <div class="cue label"><i></i>Scroll</div>
   </section>
-
-  <div class="marq"><div class="track" id="marq"></div></div>
 
   <!-- CASE STUDIES -->
   <section class="s" id="work">
     <div class="wrap">
       <div class="shead rv">
-        <div><div class="fl"><span>01 — Case studies</span></div><h2>Selected <span class="it">work</span></h2></div>
+        <div><span class="label">01 — Work</span><h2>Selected <span class="it">work</span></h2></div>
         <p>Campaigns, AI product imagery and motion. Open any project for the brief, the thinking, and every format it shipped in.</p>
       </div>
-      <div class="filters rv" id="filters"></div>
       <div class="grid" id="grid"></div>
     </div>
-  </section>
-
-  <!-- CREATIVE WALL -->
-  <section class="s" id="creatives" style="padding-top:0">
-    <div class="wrap">
-      <div class="shead rv">
-        <div><div class="fl"><span>02 — Image creatives</span></div><h2>The <span class="it">wall</span></h2></div>
-        <p>Finished pieces from across the projects — feed posts and banners.</p>
-      </div>
-      <div class="wall" id="wall"></div>
-    </div>
-  </section>
-
-  <!-- MOTION -->
-  <section class="s" id="motion" style="padding-top:0">
-    <div class="wrap">
-      <div class="shead rv">
-        <div><div class="fl"><span>03 — Motion</span></div><h2>Made to <span class="it">move</span></h2></div>
-        <p>Animated cuts for stories, reels and banners — every campaign ships with motion. Scroll sideways; click to watch with sound.</p>
-      </div>
-    </div>
-    <div class="reel rv" id="reel"></div>
   </section>
 
   <!-- AI LAB -->
   <section class="s lab" id="lab">
     <div class="wrap">
       <div class="shead rv">
-        <div><div class="fl"><span>04 — AI Lab</span></div><h2>One photo in,<br><span class="it">a campaign out</span></h2></div>
+        <div><span class="label">02 — AI Lab</span><h2>One photo in,<br><span class="it">a campaign out</span></h2></div>
         <p>How I make realistic AI product imagery that a brand can actually use: the product stays exact, the world around it is built, and every idea lands in every format.</p>
       </div>
       <div class="pipe rv" id="pipe"></div>
@@ -107,61 +75,11 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="s" id="services">
-    <div class="wrap">
-      <div class="shead rv">
-        <div><div class="fl"><span>05 — Services</span></div><h2>What I'll do<br><span class="it">for your team</span></h2></div>
-        <p>The work I do every week — each card links to the projects that prove it.</p>
-      </div>
-      <div class="svc" id="svc"></div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="s canvas-bg" id="experience">
-    <div class="wrap">
-      <div class="shead rv">
-        <div><div class="fl"><span>06 — Experience</span></div><h2>Eight years of <span class="it">shipping</span></h2></div>
-        <p>Design that had to sell, print and scale — because for four of those years, the brand was my own.</p>
-      </div>
-      <div class="exp">
-        <div class="nums rv" id="nums"></div>
-        <div class="timeline" id="timeline"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOOLKIT -->
-  <section class="s" id="toolkit">
-    <div class="wrap tk">
-      <div class="rv">
-        <div class="fl"><span>07 — Toolkit</span></div>
-        <h2 style="font-family:var(--disp);font-weight:600;font-size:clamp(38px,5.4vw,84px);line-height:1;letter-spacing:-.045em">Tools, <span class="it volt">in layers</span></h2>
-        <p style="max-width:520px;color:var(--chalk-2);margin-top:22px">Adobe for the craft, Figma for layout, and a local AI pipeline for product imagery and motion. Years of print production taught me colour, bleed and file prep the hard way. Click a layer to toggle it.</p>
-        <div class="langs" id="langs"></div>
-      </div>
-      <div class="panel rv" id="panel"></div>
-    </div>
-  </section>
-
   <!-- ABOUT -->
   <section class="s" id="about">
     <div class="wrap about-grid">
-      <div class="selframe rv" id="selframe"></div>
-      <div class="about-text rv"><div class="fl"><span>08 — About</span></div><div id="aboutText"></div></div>
-    </div>
-  </section>
-
-  <!-- BEHANCE (shown when data/site.js -> behance has entries or a Behance link) -->
-  <section class="s" id="behance" style="padding-top:0" hidden>
-    <div class="wrap">
-      <div class="shead rv">
-        <div><div class="fl"><span>09 — Archive</span></div><h2>More on <span class="it">Behance</span></h2></div>
-        <p>Earlier projects, published on Behance.</p>
-      </div>
-      <div class="be" id="be"></div>
-      <div style="margin-top:36px" id="beMore"></div>
+      <div class="ph rv" id="photo"></div>
+      <div class="about-text rv"><span class="label">03 — About</span><div id="aboutText"></div><div class="tools" id="tools"></div></div>
     </div>
   </section>
 
@@ -184,8 +102,8 @@
   <footer class="f"><span>© <span id="yr"></span> <span data-site="name"></span> — <span data-site="roleLong"></span></span><span id="flinks"></span><a href="#top">Back to top ↑</a></footer>
   <div class="lightbox" id="lightbox"></div>
 
-  <script src="data/site.js?v=202610141948"></script>
-  <script src="data/projects.js?v=202610141948"></script>
-  <script src="assets/js/main.js?v=202610160057"></script>
+  <script src="data/site.js?v=202610190035"></script>
+  <script src="data/projects.js?v=202610190035"></script>
+  <script src="assets/js/main.js?v=202610190035"></script>
 </body>
 </html>
