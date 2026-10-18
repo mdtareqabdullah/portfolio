@@ -110,8 +110,10 @@ section.s { padding: clamp(80px, 10vw, 140px) 0; }
 @media (max-width: 860px) { .shead { grid-template-columns: 1fr; } }
 
 /* ------------------------------------------------------------------ case studies */
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3vw, 40px); row-gap: clamp(48px, 5vw, 76px); }
-.case { display: block; }
+/* rows of 2 · 3 · 2: the first two and the last two cards take half the width, the middle ones a third */
+.grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(24px, 3vw, 40px); row-gap: clamp(48px, 5vw, 76px); }
+.case { display: block; grid-column: span 2; }
+.case:nth-child(-n+2), .case:nth-last-child(-n+2) { grid-column: span 3; }
 .case .media { aspect-ratio: 4 / 5; overflow: hidden; background: var(--panel); position: relative; border-radius: 6px; }
 .case .media img, .case .media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease), opacity .5s; }
 .case .media video { opacity: 0; }
@@ -124,7 +126,7 @@ section.s { padding: clamp(80px, 10vw, 140px) 0; }
 .case:hover .arrow { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 .case .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; grid-column: 1 / -1; }
 .chip { font-size: 11px; letter-spacing: .06em; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink-2); }
-@media (max-width: 980px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 980px) { .grid { grid-template-columns: repeat(2, 1fr); } .case, .case:nth-child(-n+2), .case:nth-last-child(-n+2) { grid-column: auto; } }
 @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
 
 /* ------------------------------------------------------------------ AI lab pipeline */
