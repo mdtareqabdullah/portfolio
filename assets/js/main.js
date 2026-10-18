@@ -113,7 +113,7 @@
           ${p.coverVideo ? `<video data-src="${p.coverVideo}" muted loop playsinline preload="none"></video>` : ""}
         </div>
         <div class="info"><h3>${esc(p.title)}</h3><span class="arrow">→</span><span class="sub">${esc(p.sub)}</span>
-          <div class="chips">${p.concept ? `<span class="chip">Concept</span>` : ""}${p.archive ? `<span class="chip">Archive</span>` : ""}${p.cats.map((c) => `<span class="chip">${esc(c)}</span>`).join("")}</div></div>
+          <div class="chips">${p.assessment ? `<span class="chip">Unofficial assessment</span>` : ""}${p.concept ? `<span class="chip">Concept</span>` : ""}${p.archive ? `<span class="chip">Archive</span>` : ""}${p.cats.map((c) => `<span class="chip">${esc(c)}</span>`).join("")}</div></div>
       </a>`).join("");
     $$("#grid .case").forEach((a) => {
       const v = $("video", a); if (!v) return;
@@ -169,8 +169,8 @@
     $("#cs").innerHTML = `
       <section class="cs-hero"><div class="wrap">
         <a class="back" href="index.html#work">← All work</a>
-        <div class="fl rv"><span>${pad(i + 1)} — ${esc(p.cats.join(" · "))}</span><b>${p.concept ? "Concept · " : ""}${p.archive ? "Archive · " : ""}${esc(p.year)}</b></div>
-        <h1 class="rv">${esc(p.title)}</h1><p class="lead rv">${esc(p.sub)}</p>
+        <div class="fl rv"><span>${pad(i + 1)} — ${esc(p.cats.join(" · "))}</span><b>${p.assessment ? "Unofficial assessment · " : ""}${p.concept ? "Concept · " : ""}${p.archive ? "Archive · " : ""}${esc(p.year)}</b></div>
+        <h1 class="rv">${esc(p.title)}</h1><p class="lead rv">${esc(p.sub)}</p>${p.note ? `<p class="cs-note rv">${esc(p.note)}</p>` : ""}
         <dl class="cs-meta rv"><div><dt>Client</dt><dd>${esc(p.client)}</dd></div><div><dt>Year</dt><dd>${esc(p.year)}</dd></div>
           <div><dt>Role</dt><dd>${esc(p.role)}</dd></div><div><dt>Tools</dt><dd>${p.tools.map(esc).join(", ")}</dd></div></dl>
       </div></section>

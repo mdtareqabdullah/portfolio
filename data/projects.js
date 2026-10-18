@@ -73,6 +73,48 @@ window.PROJECTS = [
     ],
   },
   {
+    id: "freechoice", title: "FreeChoice B-Energy", sub: "A supplement product page — an unofficial design assessment",
+    client: "FreeChoice — unofficial assessment, not commissioned", year: "2026", assessment: true,
+    cats: ["Web & e-commerce", "Health", "AI Imagery", "Motion"],
+    role: "Product page design, art direction, AI imagery & compositing, scientific storytelling, motion",
+    tools: ["Figma", "FLUX.2", "Krea 2", "ComfyUI", "HTML/CSS (layout & motion)"],
+    cover: I("freechoice/cover"), coverWide: I("freechoice/hero"), coverVideo: "assets/video/freechoice/use_2.mp4", accent: "#E39B3B",
+    note: "Unofficial assessment. I made this page as a three-day design test during a hiring process. It was not commissioned " +
+      "by FreeChoice and is not their live website. The FreeChoice name, logo and B-Energy tin belong to FreeChoice; " +
+      "the product facts come from the brand's own label.",
+    brief: "One complete desktop product page for B-Energy — vitamin B1, B3 (niacin) and C — that feels part of FreeChoice's new " +
+      "website: premium and elegant first, scientific without being heavy, and honest, with no invented claims or certifications. " +
+      "Three days, delivered in Figma with editable layers.",
+    approach: "One idea carries the page: a single line, from plate to thought. It starts at the tin in the hero and runs down the " +
+      "page, linking what's inside, the benefits, and a science panorama that follows energy from food through a cell's " +
+      "mitochondria to a nerve cell. Each vitamin is a picture a customer reads at a glance — a wheat ear, a glass head, balanced " +
+      "stones — with the formula kept small underneath. The tin is always the brand's real packshot, set on a surface, never " +
+      "redrawn. The niacin flush is explained calmly, in warm colours, instead of as a red warning.",
+    outcome: "A full desktop product page in eleven sections — hero and purchase panel, what's inside, benefits, science, how to use, " +
+      "standards, reviews, a bundle with the multivitamin, FAQ and footer — with editable layers in Figma, plus five motion loops. " +
+      "Delivered within the three days.",
+    gallery: [
+      { section: "The page", text: "A scroll-through of the whole page, with the line drawing itself as it goes." },
+      { ...V("freechoice/scroll"), fmt: "Scroll-through", cap: "Desktop 1440", wide: true },
+      { section: "Section by section", text: "Each section carries one job, and the line ties them into one story." },
+      { src: I("freechoice/inside"), fmt: "What's inside", cap: "Each vitamin as a picture, the formula small underneath", wide: true },
+      { src: I("freechoice/benefits"), fmt: "Benefits", cap: "Energy for body and mind", wide: true },
+      { src: I("freechoice/science"), fmt: "The science", cap: "From food to mental energy", wide: true },
+      { src: I("freechoice/use"), fmt: "How to use", cap: "The niacin flush, explained calmly", wide: true },
+      { src: I("freechoice/standards"), fmt: "Standards", cap: "Only what the label supports", wide: true },
+      { src: I("freechoice/bundle"), fmt: "Bundle", cap: "Built to sit on the multivitamin", wide: true },
+      { src: I("freechoice/faq"), fmt: "FAQ", wide: true },
+      { section: "Motion", text: "The page moves in a few places only — the benefits band, the science panorama and the how-to-use cards. The line itself never moves." },
+      { ...V("freechoice/science_pano"), fmt: "Science panorama", cap: "Loop", wide: true },
+      { ...V("freechoice/benefits_band"), fmt: "Benefits band", cap: "Loop", wide: true },
+      { ...V("freechoice/use_1"), fmt: "How to use 1/3", cap: "Loop" },
+      { ...V("freechoice/use_2"), fmt: "How to use 2/3", cap: "Loop" },
+      { ...V("freechoice/use_3"), fmt: "How to use 3/3", cap: "Loop" },
+      { section: "Full page", text: "Top to bottom, as submitted." },
+      { src: I("freechoice/page"), fmt: "Full page", cap: "Desktop 1440", tall: true },
+    ],
+  },
+  {
     id: "frostline", title: "Frostline", sub: "Winter campaign for a technical sneaker",
     client: "Poridheyo", year: "2026", concept: true,
     cats: ["AI Imagery", "Campaign", "Social", "Motion"],
