@@ -7,7 +7,7 @@
 :root {
   --bg: #fafaf8; --panel: #f0efeb; --panel-2: #e7e6e1;
   --ink: #111111; --ink-2: #444441; --mute: #85837e; --soft: #9a9893;
-  --line: rgba(17, 17, 17, .11);
+  --line: rgba(17, 17, 17, .11); --grid: rgba(17, 17, 17, .11);
   --topbg: rgba(250, 250, 248, .86);
   --live: #3fae5a;
   --pad: clamp(20px, 4.2vw, 64px);
@@ -18,7 +18,7 @@
 :root[data-theme="dark"] {
   --bg: #121214; --panel: #1a1a1d; --panel-2: #222225;
   --ink: #ecebe7; --ink-2: #aeaca6; --mute: #7d7b76; --soft: #6f6d68;
-  --line: rgba(236, 235, 231, .10);
+  --line: rgba(236, 235, 231, .10); --grid: rgba(236, 235, 231, .05);
   --topbg: rgba(18, 18, 20, .86);
   color-scheme: dark;
 }
@@ -69,7 +69,16 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -.035em; }
 @media (max-width: 640px) { .avail { display: none; } .brand small { display: none; } }
 
 /* ------------------------------------------------------------------ hero */
-.hero { min-height: min(100vh, 920px); padding: 130px 0 70px; display: flex; align-items: center; }
+.hero { min-height: min(100vh, 920px); padding: 130px 0 70px; display: flex; align-items: center; position: relative; }
+/* a faint 80px canvas grid behind the hero, fading out towards the edges */
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 80px 80px; background-position: center top;
+  -webkit-mask-image: radial-gradient(ellipse 75% 65% at 40% 48%, #000 25%, transparent 78%);
+          mask-image: radial-gradient(ellipse 75% 65% at 40% 48%, #000 25%, transparent 78%);
+}
+.hero .wrap { position: relative; }
 .hero .wrap { display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(30px, 5vw, 80px); align-items: center; }
 .hero h1 { font-size: clamp(40px, 5vw, 76px); line-height: 1.04; margin-bottom: 26px; }
 .hero .intro { max-width: 560px; font-size: 18px; color: var(--ink-2); }
